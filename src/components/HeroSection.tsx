@@ -3,18 +3,18 @@ import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5511999999999?text=Olá!%20Quero%20crescer%20com%20a%20ELEVY%20🚀";
+  const whatsappLink = "https://wa.me/5527996491601?text=Olá!%20Quero%20crescer%20com%20a%20ELEVY%20🚀";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark">
-      {/* Background Image with Overlay */}
+      {/* Imagem de Fundo com Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark" />
       
-      {/* Animated Particles Effect */}
+      {/* Efeito de Partículas Animadas */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div
@@ -30,7 +30,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Content */}
+      {/* Conteúdo */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Logo */}
         <div className="mb-8 animate-fade-in">
@@ -38,24 +38,24 @@ const HeroSection = () => {
             ELEVY
           </h1>
           <p className="text-blue text-sm tracking-[0.3em] uppercase">
-            Digital Marketing
+            Marketing Digital
           </p>
         </div>
 
-        {/* Main Headline */}
+        {/* Headline Principal */}
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-dark-foreground mb-6 leading-tight animate-slide-up max-w-5xl mx-auto">
-          We elevate companies to a new level of{" "}
-          <span className="text-gradient-blue">visibility</span>,{" "}
-          <span className="text-gradient-blue">results</span>, and{" "}
-          <span className="text-gradient-blue">predictability</span>
+          Elevamos empresas a outro nível de{" "}
+          <span className="text-gradient-blue">visibilidade</span>,{" "}
+          <span className="text-gradient-blue">resultado</span> e{" "}
+          <span className="text-gradient-blue">previsibilidade</span>
         </h2>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-dark-foreground/80 mb-12 max-w-3xl mx-auto animate-slide-up">
-          Traffic management, digital positioning, and online presence for physical and digital businesses.
+          Gestão de tráfego, posicionamento digital e presença online para negócios físicos e digitais.
         </p>
 
-        {/* CTA Button */}
+        {/* Botão CTA */}
         <div className="animate-slide-up">
           <Button 
             variant="cta" 
@@ -63,12 +63,12 @@ const HeroSection = () => {
             className="group"
             onClick={() => window.open(whatsappLink, '_blank')}
           >
-            I want to grow with ELEVY 🚀
+            Quero crescer com a ELEVY 🚀
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Indicador de Scroll */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-blue rounded-full p-1">
             <div className="w-1 h-3 bg-blue rounded-full mx-auto animate-pulse" />

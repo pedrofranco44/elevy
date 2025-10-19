@@ -8,28 +8,28 @@ const MethodologySection = () => {
   const steps = [
     {
       icon: Search,
-      title: "Free Analysis",
-      description: "We deeply analyze your business, competitors, and market opportunities.",
+      title: "Análise Gratuita",
+      description: "Analisamos profundamente seu negócio, concorrentes e oportunidades de mercado.",
     },
     {
       icon: Lightbulb,
-      title: "Planning",
-      description: "We create a customized strategic plan focused on your specific goals.",
+      title: "Planejamento",
+      description: "Criamos um plano estratégico personalizado, focado nos seus objetivos específicos.",
     },
     {
       icon: Wrench,
-      title: "Creation",
-      description: "We develop and implement campaigns, content, and creative assets.",
+      title: "Criação",
+      description: "Desenvolvemos e implementamos as campanhas, conteúdos e os criativos direcionados.",
     },
     {
       icon: TrendingUp,
-      title: "Optimization",
-      description: "Continuous monitoring and adjustments to maximize results.",
+      title: "Otimização",
+      description: "Monitoramento contínuo e ajustes com base em dados para maximizar os resultados.",
     },
     {
       icon: Trophy,
-      title: "Results",
-      description: "Transparent reports showing the impact on your business.",
+      title: "Resultados",
+      description: "Relatórios transparentes que demonstram o impacto real no crescimento do seu negócio.",
     },
   ];
 
@@ -41,11 +41,12 @@ const MethodologySection = () => {
             const interval = setInterval(() => {
               setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : prev));
             }, 800);
+            // Limpa o intervalo quando o componente é desmontado ou sai da visão
             return () => clearInterval(interval);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 } // A animação começa quando 30% da seção está visível
     );
 
     if (sectionRef.current) {
@@ -53,30 +54,30 @@ const MethodologySection = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [steps.length]); // Adicionado steps.length como dependência para ser mais robusto
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 bg-dark relative overflow-hidden">
-      {/* Background Gradient */}
+      {/* Degradê de Fundo */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue/5 via-transparent to-blue/5" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-foreground mb-4">
-            How We <span className="text-gradient-blue">Work</span>
+            Como <span className="text-gradient-blue">Trabalhamos</span>
           </h2>
           <p className="text-xl text-dark-foreground/70 max-w-2xl mx-auto">
-            A proven methodology that transforms strategy into results
+            Uma metodologia comprovada que transforma estratégia em resultados
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Timeline */}
+          {/* Linha do Tempo */}
           <div className="relative">
-            {/* Vertical Line */}
+            {/* Linha Vertical */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue via-blue to-gold" />
 
-            {/* Steps */}
+            {/* Etapas */}
             <div className="space-y-12">
               {steps.map((step, index) => (
                 <div
@@ -85,7 +86,7 @@ const MethodologySection = () => {
                     index <= activeStep ? 'opacity-100 translate-x-0' : 'opacity-30 translate-x-4'
                   }`}
                 >
-                  {/* Icon Circle */}
+                  {/* Círculo do Ícone */}
                   <div className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 ${
                     index <= activeStep
                       ? 'bg-gradient-to-br from-blue to-blue/70 shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]'
@@ -96,11 +97,11 @@ const MethodologySection = () => {
                     }`} />
                   </div>
 
-                  {/* Content */}
+                  {/* Conteúdo */}
                   <div className="flex-1 pt-2">
                     <div className="p-6 rounded-xl bg-dark-foreground/5 border border-blue/10 hover:border-blue/30 transition-all hover-lift">
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="text-blue/50 font-bold text-sm">STEP {index + 1}</span>
+                        <span className="text-blue/50 font-bold text-sm">ETAPA {index + 1}</span>
                         <h3 className="text-2xl font-bold text-dark-foreground">
                           {step.title}
                         </h3>

@@ -1,40 +1,40 @@
-import { TrendingUp, Eye, DollarSign } from "lucide-react";
+import { Eye, DollarSign, MapPin } from "lucide-react"; // MapPin adicionado aqui
 
 const ResultsSection = () => {
   const results = [
     {
       icon: MapPin,
       value: "+300%",
-      label: "Average increase in local reach on Google",
+      label: "de aumento médio em alcance local no Google",
       color: "blue",
     },
     {
       icon: Eye,
       value: "+250%",
-      label: "Growth in organic visibility",
+      label: "de crescimento em visibilidade orgânica",
       color: "gold",
     },
     {
       icon: DollarSign,
-      value: "Up to 40%",
-      label: "Revenue increase with well-structured campaigns",
+      value: "Até 40%",
+      label: "de aumento no faturamento com campanhas bem estruturadas",
       color: "blue",
     },
   ];
 
   return (
     <section className="py-20 md:py-32 bg-light relative overflow-hidden">
-      {/* Decorative Elements */}
+      {/* Elementos Decorativos */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-light-foreground mb-4">
-            Results That <span className="text-gradient-blue">Speak</span> for Themselves
+            Resultados que <span className="text-gradient-blue">Falam</span> por Si
           </h2>
           <p className="text-xl text-light-foreground/70 max-w-2xl mx-auto">
-            Real data from real clients who trusted ELEVY
+            Dados reais de clientes que confiaram na ELEVY para crescer
           </p>
         </div>
 
@@ -66,25 +66,24 @@ const ResultsSection = () => {
           ))}
         </div>
 
-        {/* Before/After Visual */}
+        {/* Bloco de Resumo */}
         <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-br from-blue/10 to-gold/10 border border-blue/20 animate-fade-in">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-light-foreground mb-4">
-              Real Growth, Measurable Impact
+              Crescimento Real, Impacto Mensurável
             </h3>
             <p className="text-light-foreground/70 mb-6">
-              These aren't just numbers — they represent transformed businesses, increased sales, 
-              and entrepreneurs who reached their goals with ELEVY's strategic guidance.
+              Estes não são apenas números — representam negócios transformados e empreendedores que alcançaram seus objetivos com a nossa orientação estratégica.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <div className="px-6 py-3 rounded-full bg-blue/10 border border-blue/30">
-                <span className="text-blue font-semibold">Data-Driven Strategy</span>
+                <span className="text-blue font-semibold">Estratégia com Dados</span>
               </div>
               <div className="px-6 py-3 rounded-full bg-gold/10 border border-gold/30">
-                <span className="text-gold-foreground font-semibold">Continuous Optimization</span>
+                <span className="text-gold-foreground font-semibold">Otimização Contínua</span>
               </div>
               <div className="px-6 py-3 rounded-full bg-blue/10 border border-blue/30">
-                <span className="text-blue font-semibold">Transparent Reporting</span>
+                <span className="text-blue font-semibold">Relatórios Transparentes</span>
               </div>
             </div>
           </div>
@@ -93,8 +92,5 @@ const ResultsSection = () => {
     </section>
   );
 };
-
-// Fix the import
-import { MapPin } from "lucide-react";
 
 export default ResultsSection;

@@ -4,34 +4,34 @@ const MissionSection = () => {
   const values = [
     {
       icon: Target,
-      title: "Strategy",
-      description: "We plan every action with purpose and data.",
+      title: "Estratégia",
+      description: "Planejamos cada ação com propósito e dados.",
     },
     {
       icon: BarChart3,
-      title: "Transparency",
-      description: "Continuous reporting and monitoring.",
+      title: "Transparência",
+      description: "Relatórios e acompanhamento contínuo.",
     },
     {
       icon: Heart,
-      title: "Humanization",
-      description: "We believe that people sell — not robots.",
+      title: "Humanização",
+      description: "Acreditamos que quem vende é gente, não robô.",
     },
   ];
 
   return (
     <section className="py-20 md:py-32 bg-dark relative overflow-hidden">
-      {/* Subtle Glow Effect */}
+      {/* Efeito de Brilho Sutil */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue/5 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-foreground mb-4">
-            Our <span className="text-gradient-blue">Mission</span> and{" "}
-            <span className="text-gradient-blue">Values</span>
+            Nossa <span className="text-gradient-blue">Missão</span> e{" "}
+            <span className="text-gradient-blue">Valores</span>
           </h2>
           <p className="text-xl text-dark-foreground/70 max-w-2xl mx-auto">
-            The principles that guide everything we do
+            Os princípios que guiam tudo o que fazemos
           </p>
         </div>
 

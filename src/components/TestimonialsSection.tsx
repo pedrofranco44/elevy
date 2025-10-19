@@ -9,19 +9,19 @@ const TestimonialsSection = () => {
     {
       name: "Maria Silva",
       city: "São Paulo, SP",
-      text: "ELEVY transformed our Google presence — today we're a local reference. Our visibility increased by over 300% and we're receiving qualified leads daily.",
+      text: "A ELEVY transformou nossa presença no Google — hoje somos referência local. Nossa visibilidade aumentou mais de 300% e estamos recebendo leads qualificados diariamente.",
       rating: 5,
     },
     {
       name: "João Santos",
       city: "Rio de Janeiro, RJ",
-      text: "ELEVY's campaigns brought real clients and measurable results. The transparency in reporting and constant optimization made all the difference for our business.",
+      text: "As campanhas da ELEVY trouxeram clientes reais e resultados mensuráveis. A transparência nos relatórios e a otimização constante fizeram toda a diferença para o nosso negócio.",
       rating: 5,
     },
     {
       name: "Ana Costa",
       city: "Belo Horizonte, MG",
-      text: "The professionalism and dedication of the ELEVY team exceeded our expectations. They truly understand digital marketing and know how to generate results.",
+      text: "O profissionalismo e a dedicação da equipe ELEVY superaram nossas expectativas. Eles realmente entendem de marketing digital e sabem como gerar resultados.",
       rating: 5,
     },
   ];
@@ -34,6 +34,7 @@ const TestimonialsSection = () => {
     setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  // Efeito para troca automática de slides
   useEffect(() => {
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
@@ -41,7 +42,7 @@ const TestimonialsSection = () => {
 
   return (
     <section className="py-20 md:py-32 bg-beige relative overflow-hidden">
-      {/* Decorative Elements */}
+      {/* Elementos Decorativos */}
       <div className="absolute top-10 left-10 w-20 h-20 text-blue/10">
         <Quote className="w-full h-full" />
       </div>
@@ -52,38 +53,38 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-beige-foreground mb-4">
-            What Our <span className="text-gradient-blue">Clients</span> Say
+            O Que Nossos <span className="text-gradient-blue">Clientes</span> Dizem
           </h2>
           <p className="text-xl text-beige-foreground/70 max-w-2xl mx-auto">
-            Real testimonials from entrepreneurs who elevated their businesses with ELEVY
+            Depoimentos reais de empreendedores que elevaram seus negócios com a ELEVY
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Testimonial Card */}
+            {/* Card de Depoimento */}
             <div className="bg-background rounded-3xl shadow-2xl p-8 md:p-12 animate-fade-in">
               <div className="flex flex-col items-center text-center">
-                {/* Avatar Placeholder */}
+                {/* Avatar */}
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue to-gold/70 mb-6 flex items-center justify-center">
                   <span className="text-2xl font-bold text-blue-foreground">
                     {testimonials[currentSlide].name.charAt(0)}
                   </span>
                 </div>
 
-                {/* Stars */}
+                {/* Estrelas de Avaliação */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 fill-gold text-gold" />
                   ))}
                 </div>
 
-                {/* Testimonial Text */}
+                {/* Texto do Depoimento */}
                 <blockquote className="text-xl md:text-2xl text-beige-foreground/90 mb-8 leading-relaxed">
                   "{testimonials[currentSlide].text}"
                 </blockquote>
 
-                {/* Author Info */}
+                {/* Informações do Autor */}
                 <div>
                   <p className="font-bold text-beige-foreground text-lg">
                     {testimonials[currentSlide].name}
@@ -95,7 +96,7 @@ const TestimonialsSection = () => {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
+            {/* Botões de Navegação */}
             <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4">
               <Button
                 variant="outline"
@@ -116,7 +117,7 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Dots Indicator */}
+          {/* Indicador de Pontos */}
           <div className="flex justify-center gap-2 mt-8">
             {testimonials.map((_, index) => (
               <button

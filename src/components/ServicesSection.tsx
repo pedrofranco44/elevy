@@ -5,32 +5,32 @@ const ServicesSection = () => {
     {
       icon: MapPin,
       title: "Google Business Profile",
-      description: "Your business visible to those searching right now.",
+      description: "Seu negócio visível para quem te procura agora.",
     },
     {
       icon: Target,
-      title: "Strategic Paid Traffic",
-      description: "Ads with purpose, not guesswork.",
+      title: "Tráfego Pago Estratégico",
+      description: "Anúncios com propósito, não achismo.",
     },
     {
       icon: Share2,
-      title: "Social Media & Branding",
-      description: "Your brand seen and remembered.",
+      title: "Redes Sociais & Branding",
+      description: "Sua marca vista e lembrada.",
     },
     {
       icon: Globe,
-      title: "Websites & Landing Pages",
-      description: "Pages that enchant and convert.",
+      title: "Sites & Landing Pages",
+      description: "Páginas que encantam e convertem.",
     },
     {
       icon: Video,
-      title: "Audiovisual Production",
-      description: "Videos and creatives that build connection.",
+      title: "Produção Audiovisual",
+      description: "Vídeos e criativos que geram conexão.",
     },
     {
       icon: FileText,
-      title: "Digital Flyers & Interactive Catalogs",
-      description: "Your portfolio in a modern, clickable format.",
+      title: "Encarte Digital e Catálogo Interativo",
+      description: "Seu portfólio em formato moderno e clicável.",
     },
   ];
 
@@ -39,10 +39,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-light-foreground mb-4">
-            Complete Solutions to <span className="text-gradient-blue">Elevate</span> Your Business
+            Soluções Completas para <span className="text-gradient-blue">Elevar</span> o Seu Negócio
           </h2>
           <p className="text-xl text-light-foreground/70 max-w-3xl mx-auto">
-            From strategy to execution, we have everything your business needs to dominate the digital market
+            Da estratégia à execução, temos tudo que seu negócio precisa para dominar o mercado digital.
           </p>
         </div>
 
